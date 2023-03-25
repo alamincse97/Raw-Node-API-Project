@@ -7,7 +7,8 @@ Date: 24/03/23
 
 // dependencies
 const http = require('http');
-const { handleReqRes } = require('./helpers/handleReqRes');
+const {handleReqRes} = require('./helpers/handleReqRes');
+
 
 // app object - module scaffolding
 const app = {};
