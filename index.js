@@ -9,10 +9,16 @@ Date: 24/03/23
 const http = require('http');
 const {handleReqRes} = require('./helpers/handleReqRes');
 const environment = require('./helpers/environments');
-
+const data = require('./lib/data');
 
 // app object - module scaffolding
 const app = {};
+
+// testing file system
+// @TODO: pore muche dibo
+data.create('test', 'newFile', {'name': 'Bangladesh', 'language': 'Bangla'}, (err) => {
+    console.log(`error was`, err);
+});
 
 // configuration
 app.config = {};
