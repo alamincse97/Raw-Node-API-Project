@@ -11,11 +11,16 @@ const http = require('http');
 const app = {};
 
 // configuration
-app.config = {};
+app.config = {
+    port: 3000;
+};
 
 // create server
 app.createServer = () => {
-    const server = http.createServer();
+    const server = http.createServer(handleReqRes);
+    server.listen(app.config.port, () => {
+        console.log(`listening to port ${app.config.port}`);
+    });
 }
 
 // handle Request Response
@@ -23,3 +28,6 @@ app.handleReqRes = (req, res) => {
     // response handle
     res.end('Hello World');
 };
+
+// start the server
+app.createServer();
