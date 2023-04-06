@@ -4,25 +4,29 @@
 * Author : Md.Al-Amin
 * Date : 05/04/2023
 */
+
 // dependencies
 const http = require('http');
-const {handleReqRes} = require('./helpers/handleReqRes');
+const { handleReqRes } = require('./helpers/handleReqRes');
+const environment = require('./helpers/environments');
+const data = require('./lib/data');
 
 // app object - module scaffolding
 const app = {};
 
-// configuration
-app.config = {
-    port: 3000
-};
+// testing file system
+// @TODO pore muche dibo
+data.create('test', 'newFile', {name: 'Bangladesh', language: 'Bangla'}, (err) => {
+    console.log(`error was`, err);
+});
 
 // create server
 app.createServer = () => {
     const server = http.createServer(app.handleReqRes);
-    server.listen(app.config.port, () => {
-        console.log(`listening to port ${app.config.port}`);
+    server.listen(environment.port, () => {
+        console.log(`listening to port ${environment.port}`);
     });
-}
+};
 
 // handle Request Response
 app.handleReqRes = handleReqRes;

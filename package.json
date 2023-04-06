@@ -1,14 +1,14 @@
 {
-  "name": "Raw-Node-API-Project",
+  "name": "raw-node-api-project",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index",
+    "start": "NODE_ENV=staging nodemon index",
     "production": "NODE_ENV=production nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Md.Al-Amin <alamin.cse97@.com>",
+  "author": "Md.Al-Amin <alamin.cse97@gmail.com>",
   "license": "UNLICENSED",
   "description": "",
   "devDependencies": {
@@ -18,8 +18,5 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.2"
-  },
-  "dependencies": {
-    "nodemon": "^2.0.22"
   }
 }
