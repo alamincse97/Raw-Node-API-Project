@@ -16,8 +16,8 @@ const app = {};
 
 // testing file system
 // @TODO pore muche dibo
-data.read('test', 'newFile', (err, data) => {
-    console.log(err, data);
+data.delete('test', 'newFile', (err) => {
+    console.log(err);
 });
 
 // create server
