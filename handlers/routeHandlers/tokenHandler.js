@@ -5,6 +5,7 @@
  * Date: 07/04/2023
  *
  */
+
 // dependencies
 const data = require('../../lib/data');
 const { hash } = require('../../helpers/utilities');
